@@ -26,17 +26,21 @@ keymap('n', '0', 'g0', { silent = true })
 keymap('n', '$', 'g$', { silent = true })
 
 -- Move lines
-keymap('n', '<C-j>', ":MoveLine(1)<CR>", opts)
-keymap('n', '<C-k>', ":MoveLine(-1)<CR>", opts)
-keymap('v', '<C-j>', ":MoveBlock(1)<CR>", opts)
-keymap('v', '<C-k>', ":MoveBlock(-1)<CR>", opts)
-keymap('n', '<C-l>', ":MoveHChar(1)<CR>", opts)
-keymap('n', '<C-h>', ":MoveHChar(-1)<CR>", opts)
-keymap('v', '<C-l>', ":MoveHBlock(1)<CR>", opts)
-keymap('v', '<C-h>', ":MoveHBlock(-1)<CR>", opts)
+keymap('n', '<A-j>', ":MoveLine(1)<CR>", opts)
+keymap('n', '<A-k>', ":MoveLine(-1)<CR>", opts)
+keymap('v', '<A-j>', ":MoveBlock(1)<CR>", opts)
+keymap('v', '<A-k>', ":MoveBlock(-1)<CR>", opts)
+keymap('n', '<A-l>', ":MoveHChar(1)<CR>", opts)
+keymap('n', '<A-h>', ":MoveHChar(-1)<CR>", opts)
+keymap('v', '<A-l>', ":MoveHBlock(1)<CR>", opts)
+keymap('v', '<A-h>', ":MoveHBlock(-1)<CR>", opts)
 
-vim.cmd "let g:move_key_modifier = 'C'"
-vim.cmd "let g:move_key_modifier_visualmode = 'C'"
+-- Copy line up and down
+keymap('n', '<A-S-j>', ":t.<CR>", opts)
+
+--
+vim.cmd "let g:move_key_modifier = 'A'"
+vim.cmd "let g:move_key_modifier_visualmode = 'A'"
 
 -- Vim option
 vim.cmd "set whichwrap+=<,>,[,]"

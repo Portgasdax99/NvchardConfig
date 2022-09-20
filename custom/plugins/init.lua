@@ -10,6 +10,7 @@ return {
 
   -- format & linting
   ["jose-elias-alvarez/null-ls.nvim"] = {
+    commit = "ff40739e5be6581899b43385997e39eecdbf9465",
     after = "nvim-lspconfig",
     config = function()
       require "custom.plugins.null-ls"

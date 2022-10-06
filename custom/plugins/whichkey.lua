@@ -90,7 +90,7 @@ local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["c"] = { "<cmd>lua require('core.utils').close_buffer()<CR>", "Close Buffer" },
+  ["c"] = { "<cmd>lua require('nvchad_ui.tabufline').close_buffer()<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
     "<cmd> Telescope find_files <CR>",

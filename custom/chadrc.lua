@@ -20,11 +20,11 @@ M.plugins = {
 }
 
 M.ui = {
-  theme = "radium",
+  theme = "catppuccin",
   hl_add = require("custom.highlights").new_hlgroups,
   theme_toggle = { "nightowl", "gruvchad" },
   hl_override = require("custom.highlights").overriden_hlgroups,
-  transparency = true,
+  transparency = false,
 }
 
 M.mappings = require "custom.mappings"
